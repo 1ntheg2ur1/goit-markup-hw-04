@@ -4,8 +4,8 @@
   --logo-part-color: #2196f3;
   --main-color: #ffffff;
   --bcnd-col: #f5f4fa;
-  --main-font: 'Roboto';
-  --secondary-font: 'Raleway';
+  --main-font: "Roboto";
+  --secondary-font: "Raleway";
   --main-font-weight: 400;
 }
 
@@ -17,11 +17,14 @@
   padding-left: 0;
 }
 
-.link {
+a {
   text-decoration: none;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0;
 }
 
@@ -101,7 +104,7 @@ img {
 .header-flex > .nav > .link {
   padding-top: 24px;
   padding-bottom: 25px;
-} 
+}
 
 .header-number,
 .header-email {
@@ -137,7 +140,15 @@ img {
 
 .hero {
   text-align: center;
-  background-color: #2f303a;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/Img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -145,6 +156,7 @@ img {
 .hero-heading {
   display: inline-block;
   width: 696px;
+
   font-family: var(--main-font), sans-serif;
   font-weight: 900;
   font-size: 44px;
@@ -223,17 +235,8 @@ img {
 
 /* Чим ми займаємось? */
 
-.activity-heading {
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  color: var(--secondary-text-color);
-  margin-bottom: 50px;
-}
-
 .list.activity-list {
   display: flex;
-
 }
 
 .activity-item:not(:first-child) {
@@ -246,7 +249,9 @@ img {
   background-color: var(--bcnd-col);
 }
 
-.team-heading {
+.team-heading,
+.activity-heading,
+.regular-customers-heading {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -290,6 +295,39 @@ img {
 
 .team-list-item:not(:first-child) {
   margin-left: 30px;
+}
+
+/* Постійні клієнти */
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+}
+
+.list-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+
+.list-box:hover {
+  color: var(--logo-part-color);
+  border-color: var(--logo-part-color);
+}
+
+.icon-box {
+  display: block;
+  fill: currentColor;
+}
+
+.list-box-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Адреса та контакти (футер) */
@@ -364,13 +402,13 @@ img {
   flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-} 
+}
 
 .portfolio-list-item:nth-child(3n) {
   margin-right: 0;
 }
 
-.portfolio-list-item:nth-last-child(-n+3) {
+.portfolio-list-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
@@ -419,5 +457,3 @@ img {
 .link:focus {
   color: var(--logo-part-color);
 }
-
-
